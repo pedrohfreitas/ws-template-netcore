@@ -4,13 +4,13 @@
 	{
 		#region SELECT
 
-		private const string select = @"";
+		private const string select = @"SELECT ID,NOME, EMAIL, DATANASCIMENTO FROM TABELATEST";
 
 		#endregion SELECT
 
 		#region Update
 
-		private const string update = @"";
+		private const string update = @"UPDATE TABELATEST SET NOME = @NOME WHERE ID = @ID";
 		#endregion Update
 	}
 }

@@ -12,12 +12,16 @@ namespace Sample
         /// </summary>
         static void Main()
         {
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[]
-            {
-                new SampleServiceBase()
-            };
-            ServiceBase.Run(ServicesToRun);
+            //ServiceBase[] ServicesToRun;
+            //ServicesToRun = new ServiceBase[]
+            //{
+            //    new SampleServiceBase()
+            //};
+            //ServiceBase.Run(ServicesToRun);
+
+            //For Debug
+            new SampleServiceBase().Rodar();
+
         }
         
     }

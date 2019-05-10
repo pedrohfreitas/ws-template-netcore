@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +10,20 @@ namespace Sample.Utils
 {
     public static class Logger
     {
+        public static Guid ChaveExecucao = Guid.NewGuid();
+
         public static void WriteToFile(string Message)
         {
             try
             {
-                string path = ConfigurationManager.AppSettings["PathToLogger"];
+
+                Message = $"{ChaveExecucao} - {DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss:fff")} - " + Message;
+                string path = ConfigurationManager.AppSettings["PathToLogger"] + $"\\{DateTime.Now.Year}\\{DateTime.Now.Month}";
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
                 }
-                string filepath = path + $"\\{DateTime.Now.Year}\\{DateTime.Now.Month}\\ServiceLog_" + DateTime.Now.Date.ToShortDateString().Replace('/', '_') + ".txt";
+                string filepath = path + $"\\ServiceLog_" + DateTime.Now.Date.ToShortDateString().Replace('/', '_') + ".txt";
                 if (!File.Exists(filepath))
                 {
                     // Create a file to write to.   
@@ -33,7 +39,15 @@ namespace Sample.Utils
                         sw.WriteLine(Message);
                     }
                 }
-            }catch{}
+            }catch(Exception ex)
+            {
+
+            }
+        }
+
+        public static void GerarChaveExecucao()
+        {
+            ChaveExecucao = Guid.NewGuid();
         }
     }
 }

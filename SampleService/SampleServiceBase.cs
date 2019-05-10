@@ -2,7 +2,9 @@
 using System.Configuration;
 using System.ServiceProcess;
 using System.Threading;
+using System.Threading.Tasks;
 using Sample.Services;
+using Sample.Utils;
 
 namespace Sample
 {
@@ -35,9 +37,22 @@ namespace Sample
 
         internal void Rodar()
         {
+            //Controle de Separação de Log
+            Logger.GerarChaveExecucao();
+
             DateTime dataHoraInicio = DateTime.Now;
             Logger.WriteToFile("Service is running at " + DateTime.Now);
-            new SampleService().Executar();
+            var result = Task.Run(() => new SampleService().Executar()).Result;
+
+            if (result)
+            {
+                Logger.WriteToFile("Sucesso " + DateTime.Now);
+            }
+            else
+            {
+                Logger.WriteToFile("Erro" + DateTime.Now);
+            }
+
             Logger.WriteToFile("Service is finish at " + DateTime.Now);
         }
     }
