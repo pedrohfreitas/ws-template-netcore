@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleWindownsService", "SampleWindownsService", "{B5DBCF6C-7636-4745-A2AC-72D0EC42775C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWinService", "SampleService\SampleWinService.csproj", "{2EAC9A3D-B670-49FF-B374-5A58114A0493}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SampleInstaller.Setup", "SampleInstaller.Setup\Sample.Setup.vdproj", "{C5048ADF-56B9-40B7-B9BC-FA7C83745AFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DEV|Any CPU = DEV|Any CPU
+		PROD|Any CPU = PROD|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.DEV|Any CPU.ActiveCfg = DEV|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.DEV|Any CPU.Build.0 = DEV|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.PROD|Any CPU.ActiveCfg = PROD|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.PROD|Any CPU.Build.0 = PROD|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.QA|Any CPU.Build.0 = QA|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5048ADF-56B9-40B7-B9BC-FA7C83745AFF}.Debug|Any CPU.ActiveCfg = Debug
+		{C5048ADF-56B9-40B7-B9BC-FA7C83745AFF}.DEV|Any CPU.ActiveCfg = DEV
+		{C5048ADF-56B9-40B7-B9BC-FA7C83745AFF}.PROD|Any CPU.ActiveCfg = PROD
+		{C5048ADF-56B9-40B7-B9BC-FA7C83745AFF}.QA|Any CPU.ActiveCfg = QA
+		{C5048ADF-56B9-40B7-B9BC-FA7C83745AFF}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EAC9A3D-B670-49FF-B374-5A58114A0493} = {B5DBCF6C-7636-4745-A2AC-72D0EC42775C}
+		{C5048ADF-56B9-40B7-B9BC-FA7C83745AFF} = {B5DBCF6C-7636-4745-A2AC-72D0EC42775C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B42CF3AC-8421-4F46-BC94-FB9F2DA93CF4}
+	EndGlobalSection
+EndGlobal
