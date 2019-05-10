@@ -2,7 +2,6 @@
 using System.Configuration;
 using System.ServiceProcess;
 using System.Threading;
-using Core.Log;
 using Sample.Services;
 
 namespace Sample
@@ -36,13 +35,10 @@ namespace Sample
 
         internal void Rodar()
         {
-            //Logs MongoDB
             DateTime dataHoraInicio = DateTime.Now;
-            Logger.Information("Template.WindowsSerivces - Sample - Iniciando ");
-            //Acionamento do serviço
+            Logger.WriteToFile("Service is running at " + DateTime.Now);
             new SampleService().Executar();
-            Logger.Information($"Template.WindowsSerivces - Sample - Tempo de Duração: {DateTime.Now.Subtract(dataHoraInicio)}");
-            Logger.Information("Template.WindowsSerivces - Sample - Finalizando ");
+            Logger.WriteToFile("Service is finish at " + DateTime.Now);
         }
     }
 }

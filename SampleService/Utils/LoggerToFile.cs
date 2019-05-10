@@ -12,7 +12,7 @@ namespace Sample.Utils
         {
             try
             {
-                string path = "";// ConfigurationManager.+ "\\logs-ws";
+                string path = ConfigurationManager.AppSettings["PathToLogger"];
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
